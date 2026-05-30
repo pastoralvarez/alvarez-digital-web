@@ -108,7 +108,7 @@ export function ArticleEditor({ categories, initialData }: ArticleEditorProps) {
       status,
       content,
       content_html,
-      keywords: form.keywords.split(",").map((k) => k.trim()).filter(Boolean),
+      keywords: form.keywords.split(",").map((k: string) => k.trim()).filter(Boolean),
       schema_faq: faqItems,
       published_at: status === "published" ? (initialData?.published_at ?? new Date().toISOString()) : null,
     };
