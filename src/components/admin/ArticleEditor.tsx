@@ -68,7 +68,7 @@ export function ArticleEditor({ categories, initialData }: ArticleEditorProps) {
       TableCell,
       TableHeader,
     ],
-    content: initialData?.content ?? "",
+    content: initialData?.content_html ?? initialData?.content ?? "",
     editorProps: {
       attributes: { class: "article-content focus:outline-none min-h-[400px] px-1" },
     },
